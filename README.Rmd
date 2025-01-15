@@ -1,0 +1,221 @@
+---
+title: "Curso introductorio a las tecnologías geoespaciales, entre ellas los Sistemas de Información Geográfica (SIG)"
+author: "José Martínez"
+date: "`r format(Sys.Date(), '%Y-%m-%d')`"
+output:
+  # bookdown::github_document2:
+  #   number_sections: false
+  #   fig_caption: yes
+  bookdown::html_document2:
+    number_sections: false
+    code_folding: hide
+    fig_caption: yes
+    md_extensions: "-fancy_lists"
+    toc: true
+    toc_depth: 3
+editor_options: 
+  chunk_output_type: console
+always_allow_html: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  cache = FALSE, 
+  echo = TRUE,
+  warning = FALSE,
+  message = FALSE,
+  out.width = '100%',
+  res = 200,
+  dev = 'jpeg',
+  fig.retina = 4)
+# options(digits = 3)
+options(knitr.duplicate.label = "allow")
+```
+
+```{r, include=F}
+representar_mapa <- F
+output_format <- knitr::opts_knit$get("rmarkdown.pandoc.to")
+repo_url <- system("git config --get remote.origin.url", intern = TRUE)
+repo_name <- sub(".git$", "", basename(repo_url))
+org_name <- basename(dirname(repo_url))
+rmd_filename <- tools::file_path_sans_ext(basename(knitr::current_input()))
+github_pages_url <- paste0("https://", org_name, ".github.io/", repo_name, "/", rmd_filename, ".html")
+```
+
+```{r, results='asis', echo=F}
+if (grepl('gfm', output_format)) {
+  cat('Versión HTML (quizá más legible), [aquí](', github_pages_url, ')\n', sep = '')
+} else if (output_format == 'latex') {
+  cat('Versión HTML (quizá más legible), [aquí](', github_pages_url, ')\n', sep = '')
+}
+```
+
+
+# Fecha
+
+- Días: 28 y 29 de enero, 2025
+- Horario: 3 a 7 pm
+- Lugar: por definir
+
+```{r, include=F, eval=representar_mapa}
+library(leaflet)
+library(webshot2)
+library(htmlwidgets)
+map <- leaflet() %>%
+  addProviderTiles(providers$Esri.WorldImagery, options = providerTileOptions(maxZoom = 21)) %>%
+  leaflet::addMiniMap(width = 100, height = 100) %>%
+  setView(lng = -69.91673, lat = 18.45952, zoom = 18) %>%
+  addMarkers(lng = -69.91673, lat = 18.45952, popup = "FC-101", ) %>%
+  leafem::addMouseCoordinates()
+```
+
+
+```{r, results='asis', echo=F, eval=representar_mapa}
+if (grepl('gfm', output_format)) {
+  # Guardar el mapa como HTML y luego capturar una imagen
+  saveWidget(map, "temp_map.html", selfcontained = TRUE)
+  webshot("temp_map.html", file = "map.png", vwidth = 600, vheight = 400, cliprect = "viewport")
+  cat("![Mapa](map.png)")
+  invisible(file.remove('temp_map.html'))
+}
+```
+
+
+```{r mapa, out.width='50%', fig.height=4, echo=F, eval=representar_mapa}
+if (grepl('html', output_format)) {
+  map
+}
+```
+
+# Programa
+
+## Día 1: Introducción a las tecnologías geoespaciales
+
+> Se añadirán pausas cortas de 5 minutos entre sesiones.
+
+### Primera sesión (1 hora)
+
+- Introducción a las tecnologías geoespaciales, entre ellas los Sistemas de Información Geográfica (SIG)
+- Breve historia y evolución, comenzando en los SIG
+- Aplicaciones de las tecnologías geoespaciales en diversas disciplinas
+
+### Segunda sesión (1.5 horas)
+
+- Ejercicios prácticos:
+  1. Interfaz gráfica de QGIS
+  2. SRC (CRS), fuentes (WMS) para colocar como base
+  3. Cargar una fuente ráster, identificar, enmascarar, analizar, exportar
+  4. Cargar una fuente vectorial, seleccionar, identificar, modificar
+  5. ¿Python? ¿R? ¿Qué pintan en las tecnologías geoespaciales?
+
+### Tercera sesión (1.5 horas)
+
+- Formulación de "proyectos analíticos". En el ámbito del curso, los proyectos son flujos de trabajo y herramientas que apoyan estudios reales, específicamente, necesidades muy concretas que la información y las técnicas geoespaciales, y el software asociado me podrían ayudarán a resolver en mi estudio. Dos ejemplos:
+
+  - Realizar un diseño de muestreo espacial estratificado para garantizar muestra representativa
+  - Obtener información de una fuente de uso y cobertura del suelo para, por ejemplo, usarla como covariable en un modelo
+  
+- Votación de proyectos, orden de prelación
+
+## Día 2. Desarrollo de proyectos
+
+### Primera sesión. Desarrollo del proyecto 1 (1.5 horas)
+
+- Planteamiento del problema
+- Evaluación de alternativas
+- Implementación
+
+### Segunda sesión. Desarrollo del proyecto 2 (1.5 horas)
+
+- Mismo esquema que la anterior
+
+### Tercera sesión (1 hora)
+
+- ¿Necesito esto de las tecnologías geoespaciales realmente? ¿Necesito un nivel avanzado?
+- Próximos pasos
+
+# Recursos
+
+## Hardware necesario
+
+- **(imprescindible)** Necesitarás una PC o Mac. Mi capacidad de dar soporte de instalación de paquetes de software en Windows y MacOS es muy limitada. El ChatGPT seguramente te puede ayudar más que yo. Si usas una PC Linux, entonces seguramente seré un mejor soporte.
+
+## Software
+
+- **(imprescindible)** QGIS versión 3.x. La versión más reciente funcionará bien (con suerte). Si ya tienes QGIS instalado, versión 3.x, es probable que las tareas del curso las puedas realizar sin problemas. No te funcionará la 2.x.
+  - Estos vídeos parecen concisos y recientes sobre cómo instalarlo en Windows (lo de "gratis", pues no sé por qué lo ponen en el título, será para ganar audiencia):
+    - [Descargar e Instalar QGIS en Windows Gratis | Paso a Paso 2024](https://www.youtube.com/watch?v=3rYAAm1y5Vc)
+    - [QGIS | Descarga e Instalación ["GRATIS" Y ACTUALIZADO 2024]](https://www.youtube.com/watch?v=k31aQ1RdTZ8)
+  - Este vídeo luce una buena fuente para MacOS (conciso, aunque al final abriendo no hace una demo de si le funciona o no):
+    - [How to Download QGIS on MacBook 2024?](https://www.youtube.com/watch?v=uVJVOZYB92Q)
+- Navegador, aunque seguramente ya tienes uno instalado. Accederás a servidores a través del navegador, usa el que te resulte cómodo.
+
+Proveeré acceso a un servidor de RStudio. De todas formas, si quisieras tener independencia, puedes instalar por tu cuenta las herramientas de software que relaciono a continuación. Te recomiendo que lo hagas, porque, una vez terminado el curso, si quieres seguir usando, por ejemplo, RStudio o cuadernos Jupyter, necesitarás estos paquetes.
+
+- **(opcional)** [R + RStudio Desktop](https://posit.co/download/rstudio-desktop/). Si quieres ejecutar código de R en tu propia PC, necesitarás el intérprete de R y la IDE preferida de dicho lenguaje, que es RStudio. Es recomendable que uses la versión más reciente disponible.
+- **(opcional)** Python3 | Anaconda | Jupyter Hub | Jupyter Notebook | JupyterLab | Spyder | VS Code. Si quieres ejecutar código de Python en tu propia PC, necesitarás el intérprete (aunque seguramente ya tienes uno), y una IDE. Anaconda, en su distribución completa, te ofrece instalar el intérprete, paquetes (los más importantes, de hecho) e IDE (ofrece varias, de hecho), pero ocupa mucho espacio en disco. Mi recomendación es que uses una IDE sencilla, como Spyder o Visual Studio Code, o una IDE integrada en la web, como Jupyter Notebook (sencilla) o JupyterLab (avanzada).
+- **(opcional)** GRASS GIS. Normalmente, se instala con QGIS. Sólo que estés pendiente a la hora de elegir un instalador, pues si uno te ofrece GRASS GIS además de QGIS, prefiere ese.
+
+Considera instalar estos paquetes de software adicionales si vas a dedicarte a programar o a escribir manuscritos científicos en lo adelante.
+
+- **(opcional)** Git. Es un programa para el control de versiones. Si terminas escribiendo código informático duradero, o código que compartirás y enriquecerás con otros personas, casi seguramente necesitarás Git.
+- **(opcional)** LaTeX. Procesador de texto, pensado sobre todo para artículos científicos.
+- **(opcional)** Docker. Si te queda mucha vida profesional por delante, aprender Docker es una gran inversión. Los viejos también estamos autorizados a aprender Docker, porque el infierno de las dependencias de software afecta a todos, jóvenes y viejos. Docker resuelve las dependencias bastante bien.
+
+## Servicios ofrecidos por terceros, todos opcionales
+
+- Algún servicio de grandes modelos de lenguaje ("inteligencia artificial"), como [ChatGPT](https://chatgpt.com/), Gemini u otros.
+- [Google Earth Engine](https://earthengine.google.com/)
+- [GitHub.](https://github.com/) Obtén una cuenta en GitHub si aún no la tienes. Es recomendable crear un tóken de GitHub también para poder "empujar" cambios hacia repos remotos. Crea uno con los permisos básicos.
+- [Earth Explorer del USGS](https://earthexplorer.usgs.gov/)
+- [Alaska Satellite Facility (ASF)](https://search.asf.alaska.edu/)
+- [Copernicus Data Space Ecosystem](https://dataspace.copernicus.eu/) o [Sentinel Hub](https://apps.sentinel-hub.com/eo-browser/)
+- [Google Colab](https://colab.research.google.com/)
+- [Overleaf](https://www.overleaf.com/). Obtén una cuenta en Overleaf para crear documentos avanzados.
+- Zotero Desktop y cuenta en Zotero. Te podría ayudar a manejar citas y referencias. Existen otros servicios, como Scite y CiteDrive.
+
+## Fuentes de datos
+
+### Recomendación general
+
+- **Datos:** Imágenes satelitales (por ejemplo, Landsat, Sentinel), bases de datos geográficos disponibles públicamente. Orientaré dónde obtener estas fuentes, pero últimamente recomiendo apuntar primero al Google Earth Engine.
+
+### Algunos repositorios de GitHub con datos de ejemplo (muchos de RD) y cuadernos RMarkdown reproducibles
+
+- [Material de apoyo de la asignatura "Análisis Espacial", Maestría en Geografía, Teledetección y Ciencias de la Información Geográfica](https://github.com/maestria-geotel-master/material-de-apoyo)
+- [Estadística zonal multipropósito sobre información geoespacial de República Dominicana, usando Google Earth Engine, Python y R](https://github.com/geofis/zonal-statistics)
+- [Scripts de análisis de BCI (ecología numérica)](https://github.com/biogeografia-master/scripts-de-analisis-BCI/). Este repositorio está asociado con una lista de reproducción de mi canal de YouTube titulada [Ecología numérica con R](https://www.youtube.com/playlist?list=PLDcT2n8UzsCRDqjqSeqHI1wsiNOqpYmsJ)
+- Repositorio "maestro" y las distintas ediciones de la asignatura "Biogeografía" que imparto en el grado. ¿Cómo usarlos? Cada uno de los enlaces de abajo, lleva a una edición de la materia (Año-Semestre), donde se alojan varios repositorios, incluidos los de alumnos y alumnas. Normalmente, el repositorio "material-de-apoyo" en cada una es el que muestra el programa seguido, y en otros casos es posible encontrar repositorios titulados "asignaciones-practicas" y "asignaciones-de-manuscrito". Estos últimos muestran ejercicios asignados. En el de 2022-02 comento algunos detalles
+  - [Repositorio Maestro](https://github.com/orgs/biogeografia-master/repositories)
+  - [2019-02](https://github.com/orgs/biogeografia-201902/repositories)
+  - [2020-02](https://github.com/orgs/biogeografia-202002/repositories)
+  - [2021-01](https://github.com/orgs/biogeografia-202101/repositories)
+  - [2021-02](https://github.com/orgs/biogeografia-202102/repositories)
+  - [2022-01](https://github.com/orgs/biogeografia-202201/repositories)
+  - [2022-02](https://github.com/orgs/biogeografia-202202/repositories). Notar que en esta edición, hay un subdirectorio nombrado ["demos-personalizadas"](https://github.com/biogeografia-202202/material-de-apoyo/tree/master/practicas/demos-personalizadas). Ahí se pueden encontrar cuadernos de análisis de ecología numérica con R aplicados a datos de GBIF. Recomiendo abrir los archivos Markdown, que tienen extensión `.md`. Por ejemplo, el de la familia [Fabaceae](https://github.com/biogeografia-202202/material-de-apoyo/blob/master/practicas/demos-personalizadas/practica-99-tu-manuscrito-3-resultados-fabaceae.md)
+  - [2023-02](https://github.com/orgs/biogeografia-202302/repositories)
+  - [2024-01](https://github.com/orgs/biogeografia-202401/repositories)
+- ["Datos para proyectos" (datos a nivel municipal sobre viviendas y personas del Censo 2010; datos de geomorfometría a nivel municipal; datos de precipitación de ONAMET)](https://github.com/maestria-geotel-master/datos-para-proyectos)
+- [Manuscrito "Generación de red hidrográfica densa de República Dominicana a partir de modelo digital de elevaciones de resolución media"](https://github.com/geofis/red-hidrografica-densa-rd)
+- [Coberturas del suelo del polígono núcleo del campus de la Universidad Autónoma de Santo Domingo (UASD) en su sede central](https://github.com/geofis/coberturas-suelo-uasd)
+- [Diseño de muestreo mediante índice espacial en Los Pilones / Los Boquerones. Asignaturas biogeografía y geomorfología, UASD](https://github.com/geofis/diseno-muestreo-los-pilones)
+- [Reproducible R code for the manuscript entitled "Fire and forest loss in the Dominican Republic during the 21st Century"](https://github.com/geofis/forest-loss-fire-reproducible)
+- [ENHOGAR-2018, TIC](https://github.com/geofis/enhogar-2018)
+- [Microsoft Building Footprints, Distrito Nacional, RD](https://github.com/geofis/mbf-dn-rd)
+
+## Otros recursos de los que seguramente disponemos
+
+- Aula ¡con aire! (qué no se vaya la luz), mesas y sillas, y el resto de las instalaciones
+- Proyector
+- Pizarra
+
+# Referencias destacadas
+
+Bivand, R. S., Pebesma, E., & Gómez-Rubio, V. (2013). Applied Spatial Data Analysis with R. Springer New York. https://doi.org/10.1007/978-1-4614-7618-4
+
+Olaya, V. (2020). Sistemas de Información Geográfica. https://volaya.github.io/libro-sig/
+
+Lovelace, R., Nowosad, J., & Muenchow, J. (2019). Geocomputation with R. Chapman and Hall/CRC. https://r.geocompx.org/
+
+Dorman, M., Graser A., Nowosad, J. & Lovelace, R. (2019). Geocomputation with Python. Chapman and Hall/CRC. https://py.geocompx.org/
