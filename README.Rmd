@@ -6,13 +6,14 @@ output:
   # bookdown::github_document2:
   #   number_sections: false
   #   fig_caption: yes
-  bookdown::html_document2:
-    number_sections: false
-    code_folding: hide
-    fig_caption: yes
-    md_extensions: "-fancy_lists"
-    toc: true
-    toc_depth: 3
+  # bookdown::html_document2:
+  #   number_sections: false
+  #   code_folding: hide
+  #   fig_caption: yes
+  #   md_extensions: "-fancy_lists"
+  #   toc: true
+  #   toc_depth: 3
+  bookdown::pdf_document2
 editor_options: 
   chunk_output_type: console
 always_allow_html: true
