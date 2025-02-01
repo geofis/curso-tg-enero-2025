@@ -2,16 +2,25 @@ Curso introductorio a las tecnologías geoespaciales, entre ellas los
 Sistemas de Información Geográfica (SIG)
 ================
 José Martínez
-2025-01-14
+2025-02-01
 
 Versión HTML (quizá más legible),
 [aquí](https://geofis.github.io/curso-tg-enero-2025/README.html)
 
+<!-- # OUTPUT FORMAT -->
+<!-- ```{r} -->
+<!-- output_format -->
+<!-- ``` -->
+
 # Fecha
 
-- Días: 28 y 29 de enero, 2025
+- Días: aula FC-101
 - Horario: 3 a 7 pm
-- Lugar: por definir
+- Lugar: 6 y 7 de febrero, 2025
+
+![Localización del aula FC-101. En [este
+HTML](https://geofis.github.io/curso-tg-enero-2025/README.html) se ve
+mejor](map.png)
 
 # Programa
 
@@ -39,17 +48,26 @@ Versión HTML (quizá más legible),
 ### Tercera sesión (1.5 horas)
 
 - Formulación de “proyectos analíticos”. En el ámbito del curso, los
-  proyectos son flujos de trabajo y herramientas que apoyan estudios
-  reales, específicamente, necesidades muy concretas que la información
-  y las técnicas geoespaciales, y el software asociado me podrían
-  ayudarán a resolver en mi estudio. Dos ejemplos:
+  proyectos son las distintas piezas que apoyan estudios reales,
+  específicamente, necesidades muy concretas que la información y las
+  técnicas geoespaciales, así como el software asociado, podrían ayudar
+  a resolver. Dos ejemplos:
 
   - Realizar un diseño de muestreo espacial estratificado para
-    garantizar muestra representativa
-  - Obtener información de una fuente de uso y cobertura del suelo para,
-    por ejemplo, usarla como covariable en un modelo
+    garantizar muestra representativa y que ayude a responder la
+    pregunta de investigación planteada. Resuelto esto, se podrían
+    intentar pasos siguientes, como por ejemplo, cómo colectar datos en
+    terreno con coordenada siguiendo el diseño, cómo preparar cuadernos
+    de análisis para cuando lleguen los datos, cómo redactar resultados
+    integrados con código, etc.
 
-- Votación de proyectos, orden de prelación
+  - Obtener información de una fuente de uso y cobertura del suelo para,
+    por ejemplo, usarla como covariable en un modelo. Resuelto esto, se
+    podría intentar avanzar en el procesamiento, por ejemplo, generar
+    unidades de análisis (un kernel), preparar los análisis o redactar
+    de forma integrada los resultados.
+
+- Votación de proyectos, orden de prelación.
 
 ## Día 2. Desarrollo de proyectos
 
@@ -75,8 +93,9 @@ Versión HTML (quizá más legible),
 
 - **(imprescindible)** Necesitarás una PC o Mac. Mi capacidad de dar
   soporte de instalación de paquetes de software en Windows y MacOS es
-  muy limitada. El ChatGPT seguramente te puede ayudar más que yo. Si
-  usas una PC Linux, entonces seguramente seré un mejor soporte.
+  muy limitada. Alguna IA seguramente te puede ayudar más que yo. Si
+  usas una PC Linux, entonces seguramente seré un mejor soporte para la
+  instalación de software.
 
 ## Software
 
@@ -84,31 +103,42 @@ Versión HTML (quizá más legible),
   funcionará bien (con suerte). Si ya tienes QGIS instalado, versión
   3.x, es probable que las tareas del curso las puedas realizar sin
   problemas. No te funcionará la 2.x.
+
   - Estos vídeos parecen concisos y recientes sobre cómo instalarlo en
     Windows (lo de “gratis”, pues no sé por qué lo ponen en el título,
     será para ganar audiencia):
     - [Descargar e Instalar QGIS en Windows Gratis \| Paso a Paso
       2024](https://www.youtube.com/watch?v=3rYAAm1y5Vc)
-    - [QGIS \| Descarga e Instalación \[“GRATIS” Y ACTUALIZADO
-      2024\]](https://www.youtube.com/watch?v=k31aQ1RdTZ8)
+    - [QGIS \| Descarga e Instalación. “GRATIS” Y ACTUALIZADO
+      2024](https://www.youtube.com/watch?v=k31aQ1RdTZ8)
   - Este vídeo luce una buena fuente para MacOS (conciso, aunque al
     final abriendo no hace una demo de si le funciona o no):
     - [How to Download QGIS on MacBook
       2024?](https://www.youtube.com/watch?v=uVJVOZYB92Q)
-- Navegador, aunque seguramente ya tienes uno instalado. Accederás a
-  servidores a través del navegador, usa el que te resulte cómodo.
 
-Proveeré acceso a un servidor de RStudio. De todas formas, si quisieras
-tener independencia, puedes instalar por tu cuenta las herramientas de
-software que relaciono a continuación. Te recomiendo que lo hagas,
-porque, una vez terminado el curso, si quieres seguir usando, por
-ejemplo, RStudio o cuadernos Jupyter, necesitarás estos paquetes.
+- **(imprescindible)** Navegador. Seguramente ya tienes uno instalado
+  (Chrome, Safari, Edge; Firefox todavía funciona, pero está teniendo
+  algunos inconvenientes últimamente). Usarás el navegador para acceder
+  a diversos servicios, así que usa el que te resulte cómodo. Aunque en
+  esta primera edición del curso no programaremos intensamente, si
+  llegara a haber una fase avanzada, seguramente programaremos más. De
+  todas formas, proveeré acceso a un servidor de RStudio para el que
+  sólo necesitarás el navegador, así que asegúrate de tener uno
+  actualizado y que te resulte cómodo.
+
+- Pensando en el futuro, o si quisieras tener independencia, puedes
+  instalar por tu cuenta las herramientas de software que relaciono a
+  continuación. Te recomiendo que lo hagas, porque, una vez terminado el
+  curso, si quieres seguir usando, por ejemplo, RStudio o cuadernos
+  Jupyter, necesitarás estas aplicaciones.
 
 - **(opcional)** [R + RStudio
   Desktop](https://posit.co/download/rstudio-desktop/). Si quieres
   ejecutar código de R en tu propia PC, necesitarás el intérprete de R y
-  la IDE preferida de dicho lenguaje, que es RStudio. Es recomendable
-  que uses la versión más reciente disponible.
+  la IDE (“entorno de desarrollo integrado”) más usada para dicho
+  lenguaje, que es RStudio. Es recomendable que uses la versión más
+  reciente disponible.
+
 - **(opcional)** Python3 \| Anaconda \| Jupyter Hub \| Jupyter Notebook
   \| JupyterLab \| Spyder \| VS Code. Si quieres ejecutar código de
   Python en tu propia PC, necesitarás el intérprete (aunque seguramente
@@ -118,20 +148,23 @@ ejemplo, RStudio o cuadernos Jupyter, necesitarás estos paquetes.
   disco. Mi recomendación es que uses una IDE sencilla, como Spyder o
   Visual Studio Code, o una IDE integrada en la web, como Jupyter
   Notebook (sencilla) o JupyterLab (avanzada).
+
 - **(opcional)** GRASS GIS. Normalmente, se instala con QGIS. Sólo que
   estés pendiente a la hora de elegir un instalador, pues si uno te
   ofrece GRASS GIS además de QGIS, prefiere ese.
 
-Considera instalar estos paquetes de software adicionales si vas a
-dedicarte a programar o a escribir manuscritos científicos en lo
-adelante.
+Considera instalar estos programas adicionales si vas a dedicarte a
+programar o a escribir manuscritos científicos en lo adelante. Si ya lo
+haces con otras herramientas, pero quieres explorar nuevas formas de
+trabajar, estas aplicaciones son realmente muy útiles.
 
 - **(opcional)** Git. Es un programa para el control de versiones. Si
   terminas escribiendo código informático duradero, o código que
   compartirás y enriquecerás con otros personas, casi seguramente
   necesitarás Git.
-- **(opcional)** LaTeX. Procesador de texto, pensado sobre todo para
-  artículos científicos.
+- **(opcional)** LaTeX. Sistema de composición de texto (basado en el
+  sistema tipográfico TeX), pensado sobre todo para artículos
+  científicos.
 - **(opcional)** Docker. Si te queda mucha vida profesional por delante,
   aprender Docker es una gran inversión. Los viejos también estamos
   autorizados a aprender Docker, porque el infierno de las dependencias
@@ -141,9 +174,12 @@ adelante.
 ## Servicios ofrecidos por terceros, todos opcionales
 
 - Algún servicio de grandes modelos de lenguaje (“inteligencia
-  artificial”), como [ChatGPT](https://chatgpt.com/), Gemini u otros.
-- [Google Earth Engine](https://earthengine.google.com/)
-- [GitHub.](https://github.com/) Obtén una cuenta en GitHub si aún no la
+  artificial”), como ChatGPT, Gemini, DeepSeek, Claude, Devin u otros.
+- [Google Earth Engine](https://earthengine.google.com/). Este servicio,
+  aunque lo incluí en la sección de los opcionales, es demasiado útil
+  como para ignorarlo. En el curso no enseñaré a usarlo, pero te vendría
+  bien tener una cuenta desde ya.
+- [GitHub](https://github.com/). Obtén una cuenta en GitHub si aún no la
   tienes. Es recomendable crear un tóken de GitHub también para poder
   “empujar” cambios hacia repos remotos. Crea uno con los permisos
   básicos.
@@ -155,7 +191,11 @@ adelante.
 - [Overleaf](https://www.overleaf.com/). Obtén una cuenta en Overleaf
   para crear documentos avanzados.
 - Zotero Desktop y cuenta en Zotero. Te podría ayudar a manejar citas y
-  referencias. Existen otros servicios, como Scite y CiteDrive.
+  referencias. Existen otros servicios de apoyo para construir una buena
+  lista de referencias, tales como Scite, CiteDrive y Perplexity, pero
+  hay que andarse con cuidado con estos servicios, porque bien sabemos
+  que en algunos casos, alucinan (valga añadir que han mejorado mucho en
+  los últimos meses).
 
 ## Fuentes de datos
 
@@ -224,12 +264,13 @@ adelante.
 - [Microsoft Building Footprints, Distrito Nacional,
   RD](https://github.com/geofis/mbf-dn-rd)
 
-## Otros recursos de los que seguramente disponemos
+## Otros recursos muy útiles
 
 - Aula ¡con aire! (qué no se vaya la luz), mesas y sillas, y el resto de
-  las instalaciones
-- Proyector
-- Pizarra
+  las instalaciones.
+- Internet (esperemos que esto no falle).
+- Proyector.
+- Pizarra.
 
 # Referencias destacadas
 
