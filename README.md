@@ -4,8 +4,16 @@ Sistemas de Información Geográfica (SIG)
 José Martínez
 2025-02-01
 
-Versión HTML (quizá más legible),
-[aquí](https://geofis.github.io/curso-tg-enero-2025/README.html)
+> El repo GitHub de este curso, conteniendo dossier y programa, se
+> encuentra [aquí](https://github.com/geofis/curso-tg-enero-2025)
+
+<figure>
+<img src="qr.jpg" style="width:25.0%" alt="Visita el repo en GitHub" />
+<figcaption aria-hidden="true">Visita el repo en GitHub</figcaption>
+</figure>
+
+> La versión más legible (HTML) del curso se encuentra
+> [aquí](https://geofis.github.io/curso-tg-enero-2025/README.html)
 
 <!-- # OUTPUT FORMAT -->
 <!-- ```{r} -->

@@ -7,15 +7,15 @@ output:
   #   number_sections: false
   #   fig_caption: yes
   #   keep_html: true
-  bookdown::html_document2:
-    number_sections: false
-    code_folding: hide
-    fig_caption: yes
-    md_extensions: "-fancy_lists"
-    toc: true
-    toc_depth: 3
+  # bookdown::html_document2:
+  #   number_sections: false
+  #   code_folding: hide
+  #   fig_caption: yes
+  #   md_extensions: "-fancy_lists"
+  #   toc: true
+  #   toc_depth: 3
   # bookdown::pdf_document2
-  # bookdown::word_document2
+  bookdown::word_document2
 editor_options: 
   chunk_output_type: console
 always_allow_html: true
@@ -46,13 +46,22 @@ rmd_filename <- tools::file_path_sans_ext(basename(knitr::current_input()))
 github_pages_url <- paste0("https://", org_name, ".github.io/", repo_name, "/", rmd_filename, ".html")
 ```
 
+
 ```{r, results='asis', echo=F}
-if (grepl('gfm', output_format)) {
-  cat('Versión HTML (quizá más legible), [aquí](', github_pages_url, ')\n', sep = '')
+cat('> El repo GitHub de este curso, conteniendo dossier y programa, se encuentra [aquí](', "https://", "github.com/", org_name, "/", repo_name, ')\n', sep = '')
+```
+
+![Visita el repo en GitHub](qr.jpg){width=25%}
+
+```{r, results='asis', echo=F}
+if (grepl('gfm|tex|docx', output_format)) {
+  cat('> La versión más legible (HTML) del curso se encuentra [aquí](', github_pages_url, ')\n', sep = '')
 } #else if (output_format == 'latex') {
 #   cat('Versión HTML (quizá más legible), [aquí](', github_pages_url, ')\n', sep = '')
 # }
 ```
+
+
 
 <!-- # OUTPUT FORMAT -->
 
