@@ -1,8 +1,8 @@
 Curso introductorio a las tecnologías geoespaciales, entre ellas los
 Sistemas de Información Geográfica (SIG)
 ================
-José Martínez
-2025-02-01
+José Martínez, Miledy Alberto
+2025-02-03
 
 > El repo GitHub de este curso, conteniendo dossier y programa, se
 > encuentra [aquí](https://github.com/geofis/curso-tg-enero-2025)
@@ -26,9 +26,13 @@ José Martínez
 - Horario: 3 a 7 pm
 - Lugar: 6 y 7 de febrero, 2025
 
-![Localización del aula FC-101. En [este
-HTML](https://geofis.github.io/curso-tg-enero-2025/README.html) se ve
-mejor](map.png)
+<figure>
+<img src="map.png"
+alt="Localización del aula FC-101. En este HTML se ve mejor" />
+<figcaption aria-hidden="true">Localización del aula FC-101. En <a
+href="https://geofis.github.io/curso-tg-enero-2025/README.html">este
+HTML</a> se ve mejor</figcaption>
+</figure>
 
 # Programa
 

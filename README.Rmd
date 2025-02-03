@@ -1,6 +1,6 @@
 ---
 title: "Curso introductorio a las tecnologías geoespaciales, entre ellas los Sistemas de Información Geográfica (SIG)"
-author: "José Martínez"
+author: "José Martínez, Miledy Alberto"
 date: "`r format(Sys.Date(), '%Y-%m-%d')`"
 output:
   # bookdown::github_document2:
