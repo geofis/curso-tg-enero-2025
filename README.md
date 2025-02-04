@@ -2,7 +2,7 @@ Curso introductorio a las tecnologías geoespaciales, entre ellas los
 Sistemas de Información Geográfica (SIG)
 ================
 José Martínez, Miledy Alberto
-2025-02-03
+2025-02-04
 
 > El repo GitHub de este curso, conteniendo dossier y programa, se
 > encuentra [aquí](https://github.com/geofis/curso-tg-enero-2025)
@@ -22,14 +22,14 @@ José Martínez, Miledy Alberto
 
 # Fecha
 
-- Días: aula FC-101
+- Días: aula FC-203
 - Horario: 3 a 7 pm
 - Lugar: 6 y 7 de febrero, 2025
 
 <figure>
 <img src="map.png"
-alt="Localización del aula FC-101. En este HTML se ve mejor" />
-<figcaption aria-hidden="true">Localización del aula FC-101. En <a
+alt="Localización del aula FC-203. En este HTML se ve mejor" />
+<figcaption aria-hidden="true">Localización del aula FC-203. En <a
 href="https://geofis.github.io/curso-tg-enero-2025/README.html">este
 HTML</a> se ve mejor</figcaption>
 </figure>
@@ -111,11 +111,16 @@ HTML</a> se ve mejor</figcaption>
 
 ## Software
 
-- **(imprescindible)** QGIS versión 3.x. La versión más reciente
-  funcionará bien (con suerte). Si ya tienes QGIS instalado, versión
-  3.x, es probable que las tareas del curso las puedas realizar sin
-  problemas. No te funcionará la 2.x.
+Los puntos marcados como **(imprescindible)** debes tenerlos resueltos
+antes del curso. Escríbeme a jmartinez19@uasd.edu.do si necesitas
+asistencia, o por el foro que habilitaremos para el curso.
 
+- **(imprescindible)** QGIS versión 3.x.y. En “versionado semántico”, el
+  3 corresponde al dígito de “versión mayor”, la “x” corresponde a
+  “versión menor” y la “y” a parche o revisión. QGIS está ahora mismo en
+  su versión 3.40.3, y la estable más reciente es la 3.34.15. Es
+  preferible que instales la más reciente, o como mínimo la 3.34. La
+  versión de QGIS que definitivamente no te funcionará es la 2.x.
   - Estos vídeos parecen concisos y recientes sobre cómo instalarlo en
     Windows (lo de “gratis”, pues no sé por qué lo ponen en el título,
     será para ganar audiencia):
@@ -123,13 +128,11 @@ HTML</a> se ve mejor</figcaption>
       2024](https://www.youtube.com/watch?v=3rYAAm1y5Vc)
     - [QGIS \| Descarga e Instalación. “GRATIS” Y ACTUALIZADO
       2024](https://www.youtube.com/watch?v=k31aQ1RdTZ8)
-  - Este vídeo luce una buena fuente para MacOS (conciso, aunque al
-    final abriendo no hace una demo de si le funciona o no):
-    - [How to Download QGIS on MacBook
-      2024?](https://www.youtube.com/watch?v=uVJVOZYB92Q)
-
+  - Este vídeo luce una buena fuente para MacOS (conciso): [How to
+    Download QGIS on MacBook
+    2024?](https://www.youtube.com/watch?v=uVJVOZYB92Q)
 - **(imprescindible)** Navegador. Seguramente ya tienes uno instalado
-  (Chrome, Safari, Edge; Firefox todavía funciona, pero está teniendo
+  (Chrome, Safari, Edge; Firefox todavía funciona, pero está presentando
   algunos inconvenientes últimamente). Usarás el navegador para acceder
   a diversos servicios, así que usa el que te resulte cómodo. Aunque en
   esta primera edición del curso no programaremos intensamente, si
@@ -138,11 +141,11 @@ HTML</a> se ve mejor</figcaption>
   sólo necesitarás el navegador, así que asegúrate de tener uno
   actualizado y que te resulte cómodo.
 
-- Pensando en el futuro, o si quisieras tener independencia, puedes
-  instalar por tu cuenta las herramientas de software que relaciono a
-  continuación. Te recomiendo que lo hagas, porque, una vez terminado el
-  curso, si quieres seguir usando, por ejemplo, RStudio o cuadernos
-  Jupyter, necesitarás estas aplicaciones.
+Pensando en el futuro, o si quisieras tener independencia, puedes
+instalar por tu cuenta las herramientas de software que relaciono a
+continuación. Te recomiendo que lo hagas, porque, una vez terminado el
+curso, si quieres seguir usando, por ejemplo, RStudio o cuadernos
+Jupyter, necesitarás estas aplicaciones.
 
 - **(opcional)** [R + RStudio
   Desktop](https://posit.co/download/rstudio-desktop/). Si quieres
@@ -150,7 +153,6 @@ HTML</a> se ve mejor</figcaption>
   la IDE (“entorno de desarrollo integrado”) más usada para dicho
   lenguaje, que es RStudio. Es recomendable que uses la versión más
   reciente disponible.
-
 - **(opcional)** Python3 \| Anaconda \| Jupyter Hub \| Jupyter Notebook
   \| JupyterLab \| Spyder \| VS Code. Si quieres ejecutar código de
   Python en tu propia PC, necesitarás el intérprete (aunque seguramente
@@ -160,7 +162,6 @@ HTML</a> se ve mejor</figcaption>
   disco. Mi recomendación es que uses una IDE sencilla, como Spyder o
   Visual Studio Code, o una IDE integrada en la web, como Jupyter
   Notebook (sencilla) o JupyterLab (avanzada).
-
 - **(opcional)** GRASS GIS. Normalmente, se instala con QGIS. Sólo que
   estés pendiente a la hora de elegir un instalador, pues si uno te
   ofrece GRASS GIS además de QGIS, prefiere ese.
@@ -187,10 +188,13 @@ trabajar, estas aplicaciones son realmente muy útiles.
 
 - Algún servicio de grandes modelos de lenguaje (“inteligencia
   artificial”), como ChatGPT, Gemini, DeepSeek, Claude, Devin u otros.
-- [Google Earth Engine](https://earthengine.google.com/). Este servicio,
-  aunque lo incluí en la sección de los opcionales, es demasiado útil
-  como para ignorarlo. En el curso no enseñaré a usarlo, pero te vendría
-  bien tener una cuenta desde ya.
+- [Google Earth Engine (GEE)](https://earthengine.google.com/). Este
+  servicio, aunque lo incluí en la sección de los opcionales, es
+  demasiado útil como para ignorarlo. En el curso no enseñaré a usarlo,
+  aunque dependiendo de los proyectos que atendamos, quizá lo
+  utilicemos, así que te vendría bien tener una cuenta desde ya. Puedes
+  usar [este vídeo](https://www.youtube.com/watch?v=7zsJurpOXuA) para
+  crear tu cuenta en GEE.
 - [GitHub](https://github.com/). Obtén una cuenta en GitHub si aún no la
   tienes. Es recomendable crear un tóken de GitHub también para poder
   “empujar” cambios hacia repos remotos. Crea uno con los permisos

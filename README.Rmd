@@ -71,7 +71,7 @@ if (grepl('gfm|tex|docx', output_format)) {
 
 # Fecha
 
-- Días: aula FC-101
+- Días: aula FC-203
 - Horario: 3 a 7 pm
 - Lugar: 6 y 7 de febrero, 2025
 
@@ -82,8 +82,10 @@ library(htmlwidgets)
 map <- leaflet() %>%
   addProviderTiles(providers$Esri.WorldImagery, options = providerTileOptions(maxZoom = 21)) %>%
   leaflet::addMiniMap(width = 100, height = 100) %>%
-  setView(lng = -69.91673, lat = 18.45952, zoom = 18) %>%
-  addMarkers(lng = -69.91673, lat = 18.45952, popup = "FC-101", ) %>%
+  # setView(lng = -69.91673, lat = 18.45952, zoom = 18) %>%
+  # addMarkers(lng = -69.91673, lat = 18.45952, popup = "FC-101", ) %>%
+  setView(lng = -69.91672150661316, lat = 18.45967067439675, zoom = 18) %>%
+  addMarkers(lng = -69.91672150661316, lat = 18.45967067439675, popup = "FC-203", ) %>%
   leafem::addMouseCoordinates()
 ```
 
@@ -93,7 +95,7 @@ if (grepl('gfm|tex|docx', output_format)) {
   # Guardar el mapa como HTML y luego capturar una imagen
   saveWidget(map, "temp_map.html", selfcontained = TRUE)
   webshot("temp_map.html", file = "map.png", vwidth = 600, vheight = 400, cliprect = "viewport")
-  cat("![Localización del aula FC-101. En [este HTML](https://geofis.github.io/curso-tg-enero-2025/README.html) se ve mejor](map.png)")
+  cat("![Localización del aula FC-203. En [este HTML](https://geofis.github.io/curso-tg-enero-2025/README.html) se ve mejor](map.png)")
   invisible(file.remove('temp_map.html'))
 }
 ```
@@ -160,16 +162,17 @@ if (grepl('html', output_format)) {
 
 ## Software
 
-- **(imprescindible)** QGIS versión 3.x. La versión más reciente funcionará bien (con suerte). Si ya tienes QGIS instalado, versión 3.x, es probable que las tareas del curso las puedas realizar sin problemas. No te funcionará la 2.x.
+Los puntos marcados como **(imprescindible)** debes tenerlos resueltos antes del curso. Escríbeme a jmartinez19\@uasd.edu.do si necesitas asistencia, o por el foro que habilitaremos para el curso.
+
+- **(imprescindible)** QGIS versión 3.x.y. En "versionado semántico", el 3 corresponde al dígito de "versión mayor", la "x" corresponde a "versión menor" y la "y" a parche o revisión. QGIS está ahora mismo en su versión 3.40.3, y la estable más reciente es la 3.34.15. Es preferible que instales la más reciente, o como mínimo la 3.34. La versión de QGIS que definitivamente no te funcionará es la 2.x.
   - Estos vídeos parecen concisos y recientes sobre cómo instalarlo en Windows (lo de "gratis", pues no sé por qué lo ponen en el título, será para ganar audiencia):
     - [Descargar e Instalar QGIS en Windows Gratis | Paso a Paso 2024](https://www.youtube.com/watch?v=3rYAAm1y5Vc)
     - [QGIS | Descarga e Instalación. "GRATIS" Y ACTUALIZADO 2024](https://www.youtube.com/watch?v=k31aQ1RdTZ8)
-  - Este vídeo luce una buena fuente para MacOS (conciso, aunque al final abriendo no hace una demo de si le funciona o no):
-    - [How to Download QGIS on MacBook 2024?](https://www.youtube.com/watch?v=uVJVOZYB92Q)
+  - Este vídeo luce una buena fuente para MacOS (conciso): [How to Download QGIS on MacBook 2024?](https://www.youtube.com/watch?v=uVJVOZYB92Q)
 
-- **(imprescindible)** Navegador. Seguramente ya tienes uno instalado (Chrome, Safari, Edge; Firefox todavía funciona, pero está teniendo algunos inconvenientes últimamente). Usarás el navegador para acceder a diversos servicios, así que usa el que te resulte cómodo. Aunque en esta primera edición del curso no programaremos intensamente, si llegara a haber una fase avanzada, seguramente programaremos más. De todas formas, proveeré acceso a un servidor de RStudio para el que sólo necesitarás el navegador, así que asegúrate de tener uno actualizado y que te resulte cómodo.
+- **(imprescindible)** Navegador. Seguramente ya tienes uno instalado (Chrome, Safari, Edge; Firefox todavía funciona, pero está presentando algunos inconvenientes últimamente). Usarás el navegador para acceder a diversos servicios, así que usa el que te resulte cómodo. Aunque en esta primera edición del curso no programaremos intensamente, si llegara a haber una fase avanzada, seguramente programaremos más. De todas formas, proveeré acceso a un servidor de RStudio para el que sólo necesitarás el navegador, así que asegúrate de tener uno actualizado y que te resulte cómodo.
 
-- Pensando en el futuro, o si quisieras tener independencia, puedes instalar por tu cuenta las herramientas de software que relaciono a continuación. Te recomiendo que lo hagas, porque, una vez terminado el curso, si quieres seguir usando, por ejemplo, RStudio o cuadernos Jupyter, necesitarás estas aplicaciones.
+Pensando en el futuro, o si quisieras tener independencia, puedes instalar por tu cuenta las herramientas de software que relaciono a continuación. Te recomiendo que lo hagas, porque, una vez terminado el curso, si quieres seguir usando, por ejemplo, RStudio o cuadernos Jupyter, necesitarás estas aplicaciones.
 
 - **(opcional)** [R + RStudio Desktop](https://posit.co/download/rstudio-desktop/). Si quieres ejecutar código de R en tu propia PC, necesitarás el intérprete de R y la IDE ("entorno de desarrollo integrado") más usada para dicho lenguaje, que es RStudio. Es recomendable que uses la versión más reciente disponible.
 - **(opcional)** Python3 | Anaconda | Jupyter Hub | Jupyter Notebook | JupyterLab | Spyder | VS Code. Si quieres ejecutar código de Python en tu propia PC, necesitarás el intérprete (aunque seguramente ya tienes uno), y una IDE. Anaconda, en su distribución completa, te ofrece instalar el intérprete, paquetes (los más importantes, de hecho) e IDE (ofrece varias, de hecho), pero ocupa mucho espacio en disco. Mi recomendación es que uses una IDE sencilla, como Spyder o Visual Studio Code, o una IDE integrada en la web, como Jupyter Notebook (sencilla) o JupyterLab (avanzada).
@@ -184,7 +187,7 @@ Considera instalar estos programas adicionales si vas a dedicarte a programar o 
 ## Servicios ofrecidos por terceros, todos opcionales
 
 - Algún servicio de grandes modelos de lenguaje ("inteligencia artificial"), como ChatGPT, Gemini, DeepSeek, Claude, Devin u otros.
-- [Google Earth Engine](https://earthengine.google.com/). Este servicio, aunque lo incluí en la sección de los opcionales, es demasiado útil como para ignorarlo. En el curso no enseñaré a usarlo, pero te vendría bien tener una cuenta desde ya.
+- [Google Earth Engine (GEE)](https://earthengine.google.com/). Este servicio, aunque lo incluí en la sección de los opcionales, es demasiado útil como para ignorarlo. En el curso no enseñaré a usarlo, aunque dependiendo de los proyectos que atendamos, quizá lo utilicemos, así que te vendría bien tener una cuenta desde ya. Puedes usar [este vídeo](https://www.youtube.com/watch?v=7zsJurpOXuA) para crear tu cuenta en GEE.
 - [GitHub](https://github.com/). Obtén una cuenta en GitHub si aún no la tienes. Es recomendable crear un tóken de GitHub también para poder "empujar" cambios hacia repos remotos. Crea uno con los permisos básicos.
 - [Earth Explorer del USGS](https://earthexplorer.usgs.gov/)
 - [Alaska Satellite Facility (ASF)](https://search.asf.alaska.edu/)
