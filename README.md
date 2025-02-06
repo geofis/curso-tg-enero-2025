@@ -2,7 +2,7 @@ Curso introductorio a las tecnologías geoespaciales, entre ellas los
 Sistemas de Información Geográfica (SIG)
 ================
 José Martínez, Miledy Alberto
-2025-02-04
+2025-02-06
 
 > El repo GitHub de este curso, conteniendo dossier y programa, se
 > encuentra [aquí](https://github.com/geofis/curso-tg-enero-2025)
@@ -14,11 +14,6 @@ José Martínez, Miledy Alberto
 
 > La versión más legible (HTML) del curso se encuentra
 > [aquí](https://geofis.github.io/curso-tg-enero-2025/README.html)
-
-<!-- # OUTPUT FORMAT -->
-<!-- ```{r} -->
-<!-- output_format -->
-<!-- ``` -->
 
 # Fecha
 
@@ -33,6 +28,12 @@ alt="Localización del aula FC-203. En este HTML se ve mejor" />
 href="https://geofis.github.io/curso-tg-enero-2025/README.html">este
 HTML</a> se ve mejor</figcaption>
 </figure>
+
+# Presentaciones de diapositivas:
+
+<!-- - [Introducción a las tecnologías geoespaciales](https://geofis.github.io/curso-tg-enero-2025/presentaciones/introduccion-tecnologias-geoespaciales.html) -->
+<!-- - [Breve historia y evolución, comenzando en los SIG](https://geofis.github.io/curso-tg-enero-2025/presentaciones/breve-historia-evolucion-sig.html) -->
+<!-- - [Aplicaciones de las tecnologías geoespaciales en diversas disciplinas](https://geofis.github.io/curso-tg-enero-2025/presentaciones/aplicaciones-tecnologias-geoespaciales.html) -->
 
 # Programa
 
@@ -59,27 +60,35 @@ HTML</a> se ve mejor</figcaption>
 
 ### Tercera sesión (1.5 horas)
 
-- Formulación de “proyectos analíticos”. En el ámbito del curso, los
-  proyectos son las distintas piezas que apoyan estudios reales,
-  específicamente, necesidades muy concretas que la información y las
-  técnicas geoespaciales, así como el software asociado, podrían ayudar
-  a resolver. Dos ejemplos:
+- Formulación de “proyectos analíticos”. Para **formular tu proyecto
+  analítico**, puedes usar este formulario de Google:
+  <https://forms.gle/Fd1Tu1oasYDddT3p9>. En el ámbito del curso, un
+  proyecto analítico es una pieza que apoya un estudio real,
+  específicamente, una necesidad muy concreta que la información
+  geográfica y las técnicas geoespaciales podrían ayudar a resolver. Dos
+  ejemplos:
 
   - Realizar un diseño de muestreo espacial estratificado para
     garantizar muestra representativa y que ayude a responder la
     pregunta de investigación planteada. Resuelto esto, se podrían
-    intentar pasos siguientes, como por ejemplo, cómo colectar datos en
-    terreno con coordenada siguiendo el diseño, cómo preparar cuadernos
-    de análisis para cuando lleguen los datos, cómo redactar resultados
-    integrados con código, etc.
+    intentar pasos siguientes, como por ejemplo, proponer cómo colectar
+    datos en terreno con coordenada siguiendo el diseño, cómo preparar
+    cuadernos de análisis para cuando lleguen los datos, cómo redactar
+    resultados integrados con código, etc.
 
   - Obtener información de una fuente de uso y cobertura del suelo para,
     por ejemplo, usarla como covariable en un modelo. Resuelto esto, se
     podría intentar avanzar en el procesamiento, por ejemplo, generar
-    unidades de análisis (un kernel), preparar los análisis o redactar
-    de forma integrada los resultados.
+    unidades de análisis (también denominado “kernel”), preparar los
+    análisis o redactar de forma integrada los resultados.
 
-- Votación de proyectos, orden de prelación.
+- Votación de proyectos, orden de prelación. Cada persona votará por los
+  tres proyectos que considere más interesantes. Con dicha votación, se
+  establecerá un orden de prelación en función del número de votos
+  obtenidos por cada proyecto. Los proyectos que no sean seleccionados,
+  se podrán desarrollar en la sesión del día 2. Puedes usar este
+  **formulario de Google para realizar tu votación**:
+  <https://forms.gle/hsbYbzBhGJpMk4Mn8>
 
 ## Día 2. Desarrollo de proyectos
 
