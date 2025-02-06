@@ -29,11 +29,19 @@ href="https://geofis.github.io/curso-tg-enero-2025/README.html">este
 HTML</a> se ve mejor</figcaption>
 </figure>
 
-# Presentaciones de diapositivas:
+# Presentación de diapositivas
 
-<!-- - [Introducción a las tecnologías geoespaciales](https://geofis.github.io/curso-tg-enero-2025/presentaciones/introduccion-tecnologias-geoespaciales.html) -->
-<!-- - [Breve historia y evolución, comenzando en los SIG](https://geofis.github.io/curso-tg-enero-2025/presentaciones/breve-historia-evolucion-sig.html) -->
-<!-- - [Aplicaciones de las tecnologías geoespaciales en diversas disciplinas](https://geofis.github.io/curso-tg-enero-2025/presentaciones/aplicaciones-tecnologias-geoespaciales.html) -->
+Clic
+[aquí](https://geofis.github.io/curso-tg-enero-2025/presentaciones/diapos.html).
+Esta presentación incluye los siguientes temas:
+
+- Introducción a las tecnologías geoespaciales. Conceptos básicos de SIG
+  y datos geoespaciales.
+
+- Breve historia y evolución de las tecnologías geoespaciales,
+  incluyendo a los SIG y la observación de la Tierra (EO)
+
+- Aplicaciones de las tecnologías geoespaciales en diversas disciplinas.
 
 # Programa
 
@@ -56,7 +64,8 @@ HTML</a> se ve mejor</figcaption>
   3.  Cargar una fuente ráster, identificar, enmascarar, analizar,
       exportar
   4.  Cargar una fuente vectorial, seleccionar, identificar, modificar
-  5.  ¿Python? ¿R? ¿Qué pintan en las tecnologías geoespaciales?
+  5.  ¿Python? ¿R? ¿Qué pintan en las tecnologías geoespaciales? Casos
+      resueltos, demos.
 
 ### Tercera sesión (1.5 horas)
 
@@ -296,6 +305,11 @@ trabajar, estas aplicaciones son realmente muy útiles.
 - Internet (esperemos que esto no falle).
 - Proyector.
 - Pizarra.
+
+## Agradecimientos
+
+Miledy Alberto y José Martínez agradecemos la colaboración de Rosmery
+Martínez y Juan Cabrera por su soporte en la logística del curso.
 
 # Referencias destacadas
 
