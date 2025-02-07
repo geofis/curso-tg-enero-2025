@@ -325,6 +325,13 @@ Fuente: Wikipedia
 
 ---
 
+class: center, bottom
+<div style="background-image: url(img/resoluciones.jpg); background-size: contain; background-position: center; background-repeat: no-repeat; height: 100%; width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+</div>
+Fuente: Mahood et al. (2023)
+
+---
+
 
 class: center, bottom
 <div style="background-image: url(img/distintas-resoluciones.jpg); background-size: contain; background-position: center; background-repeat: no-repeat; height: 100%; width: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
@@ -581,8 +588,10 @@ QGIS, y los lenguajes de programación, son capaces de manejar información geog
 
 Bivand, R. S., Pebesma, E., & Gómez-Rubio, V. (2013). Applied Spatial Data Analysis with R. Springer New York. https://doi.org/10.1007/978-1-4614-7618-4
 
-Olaya, V. (2020). Sistemas de Información Geográfica. https://volaya.github.io/libro-sig/
+Dorman, M., Graser A., Nowosad, J. & Lovelace, R. (2019). Geocomputation with Python. Chapman and Hall/CRC. https://py.geocompx.org/
 
 Lovelace, R., Nowosad, J., & Muenchow, J. (2019). Geocomputation with R. Chapman and Hall/CRC. https://r.geocompx.org/
 
-Dorman, M., Graser A., Nowosad, J. & Lovelace, R. (2019). Geocomputation with Python. Chapman and Hall/CRC. https://py.geocompx.org/
+Olaya, V. (2020). Sistemas de Información Geográfica. https://volaya.github.io/libro-sig/
+
+Mahood, Adam L.; Joseph, Maxwell B.; Spiers, Anna I.; Koontz, Michael J.; Ilangakoon, Nayani; Solvik, Kylen K.; Quarderer, Nathan; McGlinchy, Joe; Scholl, Victoria M.; St. Denis, Lise A.; Nagy, Chelsea; Braswell, Anna; Rossi, Matthew W.; Herwehe, Lauren; Wasser, Leah; Cattau, Megan E.; Iglesias, Virginia; Yao, Fangfang; Leyk, Stefan; Balch, Jennifer K. Ten simple rules for working with high resolution remote sensing data. Peer Community Journal, Volume 3 (2023), article no. e4. doi : 10.24072/pcjournal.223. https://peercommunityjournal.org/articles/10.24072/pcjournal.223/

@@ -1,0 +1,55 @@
+---
+title: "Resultados de las votaciones para elegir proyectos analíticos"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Paquetes, datos
+
+```{r}
+library(tidyverse)
+votaciones <- read_csv("votaciones.csv")
+votaciones
+```
+
+## Resultados
+
+Truncar.
+
+```{r}
+# Truncar rótulos si exceden 50 caracteres
+longitud_rotulo <- 50
+truncate_label <- function(label, max_length = longitud_rotulo) {
+  if (nchar(label) > max_length) {
+    return(paste0(substr(label, 1, max_length), "..."))
+  }
+  return(label)
+}
+```
+
+Votos por proyecto.
+
+```{r}
+# Contar votos por opción
+votos_por_proy <- votaciones %>%
+  separate_rows(`Vota por tres proyectos analíticos`, sep = ";") %>%
+  count(`Vota por tres proyectos analíticos`, sort = TRUE) %>%
+  mutate(`Vota por tres proyectos analíticos` = sapply(`Vota por tres proyectos analíticos`, truncate_label))
+```
+
+Gráfico.
+
+
+```{r}
+# Graficar con ggplot
+votos_por_proy %>%
+  ggplot(aes(x = reorder(`Vota por tres proyectos analíticos`, n), y = n)) +
+  geom_col() +
+  coord_flip() +
+  labs(x = "Proyecto", y = "Votos", title = "Votos por proyecto") +
+  theme_minimal()
+```
+
