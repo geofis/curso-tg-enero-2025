@@ -86,7 +86,7 @@ leaflet() %>%
 
 ---
 
-## Herramientas y técnicas. "Geo-" hasta en la sopa
+## Herramientas y técnicas usadas en tecnologías geoespaciales. "Geo-" hasta en la sopa
 
 - **Cartografía**
 
@@ -106,11 +106,9 @@ leaflet() %>%
 
 - **Observación de la Tierra**
 
-- **Tecnología geoespacial**
-
 ---
 
-## Herramientas y técnicas. "Geo-" hasta en la sopa (cont.)
+## Herramientas y técnicas usadas en tecnologías geoespaciales. "Geo-" hasta en la sopa (cont.)
 
 - **Técnicas analíticas específicas de análisis de datos geoespaciales**
     1. Análisis de proximidad
@@ -489,6 +487,8 @@ Aunque no los puedo mostrar todos, porque son trabajos en curso y/o donde sólo 
   
   - Análisis de la distribución y estado de salud de corales de la costa sur de República Dominican (Estefany Vargas).
   
+  - Análisis del cambio en la línea de costa en playa Palenque (Ana Valera, Carolain Pérez).
+  
   - ... mis disculpas a las demás personas que no menciono aquí ...
 
 ---
@@ -511,7 +511,7 @@ class: center, bottom
 
 ---
 
-## ¿Cómo se usan en R y en QGIS?
+## ¿Cómo se usan estas bibliotecas en R y en QGIS?
 
 - **R**: los paquetes `sf`, `stars`, `raster` y `terra` utilizan GDAL/OGR, PROJ, GEOS en todas sus operaciones, especialmente el primero.
 
@@ -519,7 +519,7 @@ class: center, bottom
 
 ---
 
-# Paquetes en R
+## Paquetes en R
 
 - Paquete `raster`
 
@@ -533,7 +533,7 @@ class: center, bottom
 
 ---
 
-# Paquetes en R (cont.)
+## Paquetes en R (cont.)
 
 - Paquete `terra`
   - **Desarrollo y Soporte**: Sucesor moderno de `raster`.
@@ -546,6 +546,34 @@ class: center, bottom
   - **Funcionalidad**: Manejo de datos raster y vectoriales, sintaxis tidyverse.
   - **Mejoras**: Datos multidimensionales (tiempo, bandas).
   - **Compatibilidad**: Integración con tidyverse, soporte de múltiples formatos.
+
+---
+
+## Limitaciones a considerar
+
+QGIS, y los lenguajes de programación, son capaces de manejar información geográfica. Su uso, y sus potenciales aplicaciones, sólo están limitadas por lo siguiente:
+
+- **Dominio métodos estadísticos**, limpieza de datos, análisis exploratorio de datos, análisis multivariado, análisis espacial, modelización espacial, interpolación y geoestadística, entre otros.
+  
+- **Dominio de técnicas avanzadas** para el manejo de grandes volúmenes de datos, como machine learning, deep learning, big data geoespacial, inteligencia artificial aplicada a los datos geoespaciales, entre otros
+
+- Hardware disponible. Usar una PC de escritorio limitará las aplicaciones a realizar.
+
+---
+
+## Limitaciones a considerar (cont.)
+  
+- Una solución es usar la nube, pero esto implica un costo. También hay que considerar que, en la nube:
+
+  - El software podría no ser idéntico al de escritorio.
+  
+  - Paralelizar operaciones puede ser complicado.
+  
+  - La transferencia de datos puede ser costosa.
+  
+  - Interoperabilidad. Aunque GDAL/OGR, PROJ y GEOS son ampliamente usados, no todos los formatos son soportados. En algunos casos, se requiere de software propietario.
+
+### "Sin el apoyo de los fundamentos analíticos, los SIG, la tecnología geoespacial y cualquier herramienta asociada, se convierten en meros visores de datos"
 
 ---
 

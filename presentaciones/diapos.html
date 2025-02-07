@@ -41,7 +41,7 @@ class: center, middle, inverse, title-slide
 ### Universidad Autónoma de Santo Domingo (UASD)
 ]
 .date[
-### 2025-02-06 (actualizado: 2025-02-06)
+### 2025-02-06 (actualizado: 2025-02-07)
 ]
 
 ---
@@ -71,8 +71,8 @@ leaflet() %&gt;%
   leafem::addMouseCoordinates()
 ```
 
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-f1ea2eb2a1d2af81b383" style="width:100%;height:432px;"></div>
-<script type="application/json" data-for="htmlwidget-f1ea2eb2a1d2af81b383">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false,"maxZoom":21}]},{"method":"addMiniMap","args":[null,null,"bottomright",100,100,19,19,-5,false,false,false,false,false,false,{"color":"#ff7800","weight":1,"clickable":false},{"color":"#000000","weight":1,"clickable":false,"opacity":0,"fillOpacity":0},{"hideText":"Hide MiniMap","showText":"Show MiniMap"},[]]},{"method":"addMarkers","args":[18.45967067439675,-69.91672150661316,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"FC-203",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[18.45967067439675,-69.91672150661316],18,[]],"limits":{"lat":[18.45967067439675,18.45967067439675],"lng":[-69.91672150661316,-69.91672150661316]}},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      if( strip !==null) strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-81431e1e0a62a7c36fcc" style="width:100%;height:432px;"></div>
+<script type="application/json" data-for="htmlwidget-81431e1e0a62a7c36fcc">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false,"maxZoom":21}]},{"method":"addMiniMap","args":[null,null,"bottomright",100,100,19,19,-5,false,false,false,false,false,false,{"color":"#ff7800","weight":1,"clickable":false},{"color":"#000000","weight":1,"clickable":false,"opacity":0,"fillOpacity":0},{"hideText":"Hide MiniMap","showText":"Show MiniMap"},[]]},{"method":"addMarkers","args":[18.45967067439675,-69.91672150661316,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"FC-203",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[18.45967067439675,-69.91672150661316],18,[]],"limits":{"lat":[18.45967067439675,18.45967067439675],"lng":[-69.91672150661316,-69.91672150661316]}},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      if( strip !==null) strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
 
 ---
 
@@ -122,7 +122,7 @@ leaflet() %&gt;%
 
 ---
 
-## Herramientas y técnicas. "Geo-" hasta en la sopa
+## Herramientas y técnicas usadas en tecnologías geoespaciales. "Geo-" hasta en la sopa
 
 - **Cartografía**
 
@@ -142,11 +142,9 @@ leaflet() %&gt;%
 
 - **Observación de la Tierra**
 
-- **Tecnología geoespacial**
-
 ---
 
-## Herramientas y técnicas. "Geo-" hasta en la sopa (cont.)
+## Herramientas y técnicas usadas en tecnologías geoespaciales. "Geo-" hasta en la sopa (cont.)
 
 - **Técnicas analíticas específicas de análisis de datos geoespaciales**
     1. Análisis de proximidad
@@ -525,6 +523,8 @@ Aunque no los puedo mostrar todos, porque son trabajos en curso y/o donde sólo 
   
   - Análisis de la distribución y estado de salud de corales de la costa sur de República Dominican (Estefany Vargas).
   
+  - Análisis del cambio en la línea de costa en playa Palenque (Ana Valera, Carolain Pérez).
+  
   - ... mis disculpas a las demás personas que no menciono aquí ...
 
 ---
@@ -547,7 +547,7 @@ class: center, bottom
 
 ---
 
-## ¿Cómo se usan en R y en QGIS?
+## ¿Cómo se usan estas bibliotecas en R y en QGIS?
 
 - **R**: los paquetes `sf`, `stars`, `raster` y `terra` utilizan GDAL/OGR, PROJ, GEOS en todas sus operaciones, especialmente el primero.
 
@@ -555,7 +555,7 @@ class: center, bottom
 
 ---
 
-# Paquetes en R
+## Paquetes en R
 
 - Paquete `raster`
 
@@ -569,7 +569,7 @@ class: center, bottom
 
 ---
 
-# Paquetes en R (cont.)
+## Paquetes en R (cont.)
 
 - Paquete `terra`
   - **Desarrollo y Soporte**: Sucesor moderno de `raster`.
@@ -582,6 +582,34 @@ class: center, bottom
   - **Funcionalidad**: Manejo de datos raster y vectoriales, sintaxis tidyverse.
   - **Mejoras**: Datos multidimensionales (tiempo, bandas).
   - **Compatibilidad**: Integración con tidyverse, soporte de múltiples formatos.
+
+---
+
+## Limitaciones a considerar
+
+QGIS, y los lenguajes de programación, son capaces de manejar información geográfica. Su uso, y sus potenciales aplicaciones, sólo están limitadas por lo siguiente:
+
+- **Dominio métodos estadísticos**, limpieza de datos, análisis exploratorio de datos, análisis multivariado, análisis espacial, modelización espacial, interpolación y geoestadística, entre otros.
+  
+- **Dominio de técnicas avanzadas** para el manejo de grandes volúmenes de datos, como machine learning, deep learning, big data geoespacial, inteligencia artificial aplicada a los datos geoespaciales, entre otros
+
+- Hardware disponible. Usar una PC de escritorio limitará las aplicaciones a realizar.
+
+---
+
+## Limitaciones a considerar (cont.)
+  
+- Una solución es usar la nube, pero esto implica un costo. También hay que considerar que, en la nube:
+
+  - El software podría no ser idéntico al de escritorio.
+  
+  - Paralelizar operaciones puede ser complicado.
+  
+  - La transferencia de datos puede ser costosa.
+  
+  - Interoperabilidad. Aunque GDAL/OGR, PROJ y GEOS son ampliamente usados, no todos los formatos son soportados. En algunos casos, se requiere de software propietario.
+
+### "Sin el apoyo de los fundamentos analíticos, los SIG, la tecnología geoespacial y cualquier herramienta asociada, se convierten en meros visores de datos"
 
 ---
 

@@ -11,7 +11,7 @@
 
 <meta name="author" content="José Martínez, Miledy Alberto" />
 
-<meta name="date" content="2025-02-06" />
+<meta name="date" content="2025-02-07" />
 
 <title>Curso introductorio a las tecnologías geoespaciales, entre ellas los Sistemas de Información Geográfica (SIG)</title>
 
@@ -5769,7 +5769,7 @@ display: none;
 
 <h1 class="title toc-ignore">Curso introductorio a las tecnologías geoespaciales, entre ellas los Sistemas de Información Geográfica (SIG)</h1>
 <h4 class="author">José Martínez, Miledy Alberto</h4>
-<h4 class="date">2025-02-06</h4>
+<h4 class="date">2025-02-07</h4>
 
 </div>
 
@@ -5823,8 +5823,8 @@ display: none;
 <li>Horario: 3 a 7 pm</li>
 <li>Lugar: 6 y 7 de febrero, 2025</li>
 </ul>
-<div class="leaflet html-widget html-fill-item" id="htmlwidget-9a44f160f0c971c07393" style="width:50%;height:384px;"></div>
-<script type="application/json" data-for="htmlwidget-9a44f160f0c971c07393">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false,"maxZoom":21}]},{"method":"addMiniMap","args":[null,null,"bottomright",100,100,19,19,-5,false,false,false,false,false,false,{"color":"#ff7800","weight":1,"clickable":false},{"color":"#000000","weight":1,"clickable":false,"opacity":0,"fillOpacity":0},{"hideText":"Hide MiniMap","showText":"Show MiniMap"},[]]},{"method":"addMarkers","args":[18.45967067439675,-69.91672150661316,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"FC-203",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[18.45967067439675,-69.91672150661316],18,[]],"limits":{"lat":[18.45967067439675,18.45967067439675],"lng":[-69.91672150661316,-69.91672150661316]}},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      if( strip !==null) strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+<div class="leaflet html-widget html-fill-item" id="htmlwidget-42cbf499c4ca7867de01" style="width:50%;height:384px;"></div>
+<script type="application/json" data-for="htmlwidget-42cbf499c4ca7867de01">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["Esri.WorldImagery",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false,"maxZoom":21}]},{"method":"addMiniMap","args":[null,null,"bottomright",100,100,19,19,-5,false,false,false,false,false,false,{"color":"#ff7800","weight":1,"clickable":false},{"color":"#000000","weight":1,"clickable":false,"opacity":0,"fillOpacity":0},{"hideText":"Hide MiniMap","showText":"Show MiniMap"},[]]},{"method":"addMarkers","args":[18.45967067439675,-69.91672150661316,null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},"FC-203",null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"setView":[[18.45967067439675,-69.91672150661316],18,[]],"limits":{"lat":[18.45967067439675,18.45967067439675],"lng":[-69.91672150661316,-69.91672150661316]}},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n      function(el, x, data) {\n      // get the leaflet map\n      var map = this; //HTMLWidgets.find('#' + el.id);\n      // we need a new div element because we have to handle\n      // the mouseover output separately\n      // debugger;\n      function addElement () {\n      // generate new div Element\n      var newDiv = $(document.createElement('div'));\n      // append at end of leaflet htmlwidget container\n      $(el).append(newDiv);\n      //provide ID and style\n      newDiv.addClass('lnlt');\n      newDiv.css({\n      'position': 'relative',\n      'bottomleft':  '0px',\n      'background-color': 'rgba(255, 255, 255, 0.7)',\n      'box-shadow': '0 0 2px #bbb',\n      'background-clip': 'padding-box',\n      'margin': '0',\n      'padding-left': '5px',\n      'color': '#333',\n      'font': '9px/1.5 \"Helvetica Neue\", Arial, Helvetica, sans-serif',\n      'z-index': '700',\n      });\n      return newDiv;\n      }\n\n\n      // check for already existing lnlt class to not duplicate\n      var lnlt = $(el).find('.lnlt');\n\n      if(!lnlt.length) {\n      lnlt = addElement();\n\n      // grab the special div we generated in the beginning\n      // and put the mousmove output there\n\n      map.on('mousemove', function (e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                           ' lon: ' + (e.latlng.lng).toFixed(5) +\n                           ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                           ' | zoom: ' + map.getZoom() +\n                           ' | x: ' + L.CRS.EPSG3857.project(e.latlng).x.toFixed(0) +\n                           ' | y: ' + L.CRS.EPSG3857.project(e.latlng).y.toFixed(0) +\n                           ' | epsg: 3857 ' +\n                           ' | proj4: +proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0 +k=1.0 +units=m +nadgrids=@null +no_defs ');\n      } else {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      }\n      });\n\n      // remove the lnlt div when mouse leaves map\n      map.on('mouseout', function (e) {\n      var strip = document.querySelector('.lnlt');\n      if( strip !==null) strip.remove();\n      });\n\n      };\n\n      //$(el).keypress(67, function(e) {\n      map.on('preclick', function(e) {\n      if (e.originalEvent.ctrlKey) {\n      if (document.querySelector('.lnlt') === null) lnlt = addElement();\n      lnlt.text(\n                      ' lon: ' + (e.latlng.lng).toFixed(5) +\n                      ' | lat: ' + (e.latlng.lat).toFixed(5) +\n                      ' | zoom: ' + map.getZoom() + ' ');\n      var txt = document.querySelector('.lnlt').textContent;\n      console.log(txt);\n      //txt.innerText.focus();\n      //txt.select();\n      setClipboardText('\"' + txt + '\"');\n      }\n      });\n\n      }\n      ).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
 </div>
 <div id="presentación-de-diapositivas" class="section level1">
 <h1>Presentación de diapositivas</h1>
@@ -5845,9 +5845,9 @@ display: none;
 <div id="primera-sesión-1-hora" class="section level3">
 <h3>Primera sesión (1 hora)</h3>
 <ul>
-<li>Introducción a las tecnologías geoespaciales, entre ellas los Sistemas de Información Geográfica (SIG)</li>
-<li>Breve historia y evolución, comenzando en los SIG</li>
-<li>Aplicaciones de las tecnologías geoespaciales en diversas disciplinas</li>
+<li>Introducción a las tecnologías geoespaciales, entre ellas los Sistemas de Información Geográfica (SIG).</li>
+<li>Breve historia y evolución, comenzando en los SIG.</li>
+<li>Aplicaciones de las tecnologías geoespaciales en diversas disciplinas.</li>
 </ul>
 </div>
 <div id="segunda-sesión-1.5-horas" class="section level3">
@@ -5855,23 +5855,25 @@ display: none;
 <ul>
 <li>Ejercicios prácticos:
 <ol>
-<li>Interfaz gráfica de QGIS</li>
-<li>SRC (CRS), fuentes (WMS) para colocar como base</li>
-<li>Cargar una fuente ráster, identificar, enmascarar, analizar, exportar</li>
-<li>Cargar una fuente vectorial, seleccionar, identificar, modificar</li>
-<li>¿Python? ¿R? ¿Qué pintan en las tecnologías geoespaciales? Casos resueltos, demos.</li>
+<li>Interfaz gráfica de QGIS.</li>
+<li>SRC (CRS), fuentes (WMS) para colocar como base (incluyendo QMS).</li>
+<li>Cargar una fuente ráster, identificar, enmascarar, analizar, exportar.</li>
+<li>Cargar una fuente vectorial, seleccionar, identificar, modificar.</li>
+<li>Explorar una fuente KMZ (por ejemplo, el KMZ disponible <a href="https://drive.google.com/drive/folders/1Bwh4_PpPlWTL3Lbz4O4fsIwnrXesXXFu?usp=drive_link">aquí</a>).</li>
+<li>STAC.</li>
+<li>¿Python? ¿R? ¿Qué pintan en las tecnologías geoespaciales? Casos resueltos, demos en presentación (ver sección “Aplicaciones”). Consola de Python en QGIS.</li>
 </ol></li>
 </ul>
 </div>
 <div id="tercera-sesión-1.5-horas" class="section level3">
 <h3>Tercera sesión (1.5 horas)</h3>
 <ul>
-<li><p>Formulación de “proyectos analíticos”. Para <strong>formular tu proyecto analítico</strong>, puedes usar este formulario de Google: <a href="https://forms.gle/Fd1Tu1oasYDddT3p9" class="uri">https://forms.gle/Fd1Tu1oasYDddT3p9</a>. En el ámbito del curso, un proyecto analítico es una pieza que apoya un estudio real, específicamente, una necesidad muy concreta que la información geográfica y las técnicas geoespaciales podrían ayudar a resolver. Dos ejemplos:</p>
+<li><p>Formulación de “proyectos analíticos”. Para <strong>formular tu proyecto analítico</strong>, puedes usar este formulario de Google: <a href="https://forms.gle/Fd1Tu1oasYDddT3p9" class="uri">https://forms.gle/Fd1Tu1oasYDddT3p9</a> (lo abriré para recibir respuestas oportunamente). En el ámbito del curso, un proyecto analítico es una pieza que apoya un estudio real, específicamente, una necesidad muy concreta que la información geográfica y las técnicas geoespaciales podrían ayudar a resolver. Dos ejemplos:</p>
 <ul>
 <li><p>Realizar un diseño de muestreo espacial estratificado para garantizar muestra representativa y que ayude a responder la pregunta de investigación planteada. Resuelto esto, se podrían intentar pasos siguientes, como por ejemplo, proponer cómo colectar datos en terreno con coordenada siguiendo el diseño, cómo preparar cuadernos de análisis para cuando lleguen los datos, cómo redactar resultados integrados con código, etc.</p></li>
 <li><p>Obtener información de una fuente de uso y cobertura del suelo para, por ejemplo, usarla como covariable en un modelo. Resuelto esto, se podría intentar avanzar en el procesamiento, por ejemplo, generar unidades de análisis (también denominado “kernel”), preparar los análisis o redactar de forma integrada los resultados.</p></li>
 </ul></li>
-<li><p>Votación de proyectos, orden de prelación. Cada persona votará por los tres proyectos que considere más interesantes. Con dicha votación, se establecerá un orden de prelación en función del número de votos obtenidos por cada proyecto. Los proyectos que no sean seleccionados, se podrán desarrollar en la sesión del día 2. Puedes usar este <strong>formulario de Google para realizar tu votación</strong>: <a href="https://forms.gle/hsbYbzBhGJpMk4Mn8" class="uri">https://forms.gle/hsbYbzBhGJpMk4Mn8</a></p></li>
+<li><p>Votación de proyectos, orden de prelación. Cada persona votará por los tres proyectos que considere más interesantes. Con dicha votación, se establecerá un orden de prelación en función del número de votos obtenidos por cada proyecto. Los proyectos que no sean seleccionados, se podrán desarrollar en la sesión del día 2. Puedes usar este <strong>formulario de Google para realizar tu votación</strong>: <a href="https://forms.gle/hsbYbzBhGJpMk4Mn8" class="uri">https://forms.gle/hsbYbzBhGJpMk4Mn8</a> (lo abriré para recibir respuestas oportunamente).</p></li>
 </ul>
 </div>
 </div>
@@ -5894,8 +5896,8 @@ display: none;
 <div id="tercera-sesión-1-hora" class="section level3">
 <h3>Tercera sesión (1 hora)</h3>
 <ul>
-<li>¿Necesito esto de las tecnologías geoespaciales realmente? ¿Necesito un nivel avanzado?</li>
-<li>Próximos pasos</li>
+<li><p>¿Necesito esto de las tecnologías geoespaciales realmente? ¿Necesito un nivel avanzado?</p></li>
+<li><p>Próximos pasos</p></li>
 </ul>
 </div>
 </div>
