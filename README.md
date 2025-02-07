@@ -2,7 +2,7 @@ Curso introductorio a las tecnologías geoespaciales, entre ellas los
 Sistemas de Información Geográfica (SIG)
 ================
 José Martínez, Miledy Alberto
-2025-02-06
+2025-02-07
 
 > El repo GitHub de este curso, conteniendo dossier y programa, se
 > encuentra [aquí](https://github.com/geofis/curso-tg-enero-2025)
@@ -52,30 +52,34 @@ Esta presentación incluye los siguientes temas:
 ### Primera sesión (1 hora)
 
 - Introducción a las tecnologías geoespaciales, entre ellas los Sistemas
-  de Información Geográfica (SIG)
-- Breve historia y evolución, comenzando en los SIG
-- Aplicaciones de las tecnologías geoespaciales en diversas disciplinas
+  de Información Geográfica (SIG).
+- Breve historia y evolución, comenzando en los SIG.
+- Aplicaciones de las tecnologías geoespaciales en diversas disciplinas.
 
 ### Segunda sesión (1.5 horas)
 
 - Ejercicios prácticos:
-  1.  Interfaz gráfica de QGIS
-  2.  SRC (CRS), fuentes (WMS) para colocar como base
+  1.  Interfaz gráfica de QGIS.
+  2.  SRC (CRS), fuentes (WMS) para colocar como base (incluyendo QMS).
   3.  Cargar una fuente ráster, identificar, enmascarar, analizar,
-      exportar
-  4.  Cargar una fuente vectorial, seleccionar, identificar, modificar
-  5.  ¿Python? ¿R? ¿Qué pintan en las tecnologías geoespaciales? Casos
-      resueltos, demos.
+      exportar.
+  4.  Cargar una fuente vectorial, seleccionar, identificar, modificar.
+  5.  Explorar una fuente KMZ (por ejemplo, el KMZ disponible
+      [aquí](https://drive.google.com/drive/folders/1Bwh4_PpPlWTL3Lbz4O4fsIwnrXesXXFu?usp=drive_link)).
+  6.  STAC.
+  7.  ¿Python? ¿R? ¿Qué pintan en las tecnologías geoespaciales? Casos
+      resueltos, demos en presentación (ver sección “Aplicaciones”).
+      Consola de Python en QGIS.
 
 ### Tercera sesión (1.5 horas)
 
 - Formulación de “proyectos analíticos”. Para **formular tu proyecto
   analítico**, puedes usar este formulario de Google:
-  <https://forms.gle/Fd1Tu1oasYDddT3p9>. En el ámbito del curso, un
-  proyecto analítico es una pieza que apoya un estudio real,
-  específicamente, una necesidad muy concreta que la información
-  geográfica y las técnicas geoespaciales podrían ayudar a resolver. Dos
-  ejemplos:
+  <https://forms.gle/Fd1Tu1oasYDddT3p9> (lo abriré para recibir
+  respuestas oportunamente). En el ámbito del curso, un proyecto
+  analítico es una pieza que apoya un estudio real, específicamente, una
+  necesidad muy concreta que la información geográfica y las técnicas
+  geoespaciales podrían ayudar a resolver. Dos ejemplos:
 
   - Realizar un diseño de muestreo espacial estratificado para
     garantizar muestra representativa y que ayude a responder la
@@ -97,7 +101,8 @@ Esta presentación incluye los siguientes temas:
   obtenidos por cada proyecto. Los proyectos que no sean seleccionados,
   se podrán desarrollar en la sesión del día 2. Puedes usar este
   **formulario de Google para realizar tu votación**:
-  <https://forms.gle/hsbYbzBhGJpMk4Mn8>
+  <https://forms.gle/hsbYbzBhGJpMk4Mn8> (lo abriré para recibir
+  respuestas oportunamente).
 
 ## Día 2. Desarrollo de proyectos
 
@@ -115,6 +120,7 @@ Esta presentación incluye los siguientes temas:
 
 - ¿Necesito esto de las tecnologías geoespaciales realmente? ¿Necesito
   un nivel avanzado?
+
 - Próximos pasos
 
 # Recursos
